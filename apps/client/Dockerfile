@@ -5,13 +5,10 @@ RUN apk update
 RUN apk add --no-cache libc6-compat
 # Set working directory
 WORKDIR /app
-# Replace <your-major-version> with the major version installed in your repository. For example:
-# RUN yarn global add turbo@^2
-RUN yarn global add turbo
+RUN yarn global add turbo@^2
 COPY . .
 
 # Generate a partial monorepo with a pruned lockfile for a target workspace.
-# Assuming "web" is the name entered in the project's package.json: { name: "web" }
 RUN turbo prune client --docker
 
 # Add lockfile and package.json's of isolated subworkspace
@@ -32,14 +29,16 @@ FROM base AS runner
 WORKDIR /app
 
 # Don't run production as root
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
-USER nextjs
+RUN addgroup --system --gid 1001 client
+RUN adduser --system --uid 1001 client
+USER client
 
 # Automatically leverage output traces to reduce image size
-# https://nextjs.org/docs/advanced-features/output-file-tracing
-COPY --from=installer --chown=nextjs:nodejs /app/apps/web/.next/standalone ./
-COPY --from=installer --chown=nextjs:nodejs /app/apps/web/.next/static ./apps/web/.next/static
-COPY --from=installer --chown=nextjs:nodejs /app/apps/web/public ./apps/web/public
+# https://client.org/docs/advanced-features/output-file-tracing
+COPY --from=installer --chown=client:client /app/apps/client/.next/standalone ./
+COPY --from=installer --chown=client:client /app/apps/client/.next/static ./apps/client/.next/static
+COPY --from=installer --chown=client:client /app/apps/client/public ./apps/client/public
 
-CMD node apps/web/server.js
+EXPOSE 3000
+
+CMD node apps/client/server.js

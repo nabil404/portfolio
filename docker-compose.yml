@@ -1,4 +1,14 @@
 services:
+  client:
+    container_name: portfolio_client
+    build:
+      context: .
+      dockerfile: apps/client/Dockerfile
+    networks:
+      - portfolio_network
+    ports:
+      - "3002:3000"
+
   strapi:
     container_name: portfolio_strapi_cms
     build:

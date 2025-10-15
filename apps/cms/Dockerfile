@@ -9,7 +9,7 @@ RUN apk update
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 # Install turbo globally
-RUN yarn global add turbo
+RUN yarn global add turbo@^2
 # Copy the entire monorepo
 COPY . .
 # Prune the monorepo to only include strapi and its dependencies
@@ -25,6 +25,8 @@ WORKDIR /app
 COPY --from=builder /app/out/json/ .
 RUN yarn install --frozen-lockfile
 COPY --from=builder /app/out/full/ .
-CMD yarn build --filter=cms
 WORKDIR /app/apps/cms
+
+RUN yarn build
+EXPOSE 1337
 CMD ["yarn", "start"]
