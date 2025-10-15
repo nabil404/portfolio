@@ -1,0 +1,32 @@
+services:
+  strapi:
+    container_name: portfolio_strapi_cms
+    build:
+      context: .
+      dockerfile: apps/cms/Dockerfile
+    env_file: apps/cms/.env
+    volumes:
+      - ./apps/cms/public/uploads:/app/apps/cms/public/uploads
+    networks:
+      - portfolio_network
+    ports:
+      - "1337:1337"
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:15-alpine
+    container_name: portfolio_strapi_db
+    restart: unless-stopped
+    env_file: apps/cms/.env
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - portfolio_network
+
+volumes:
+  postgres_data:
+
+networks:
+  portfolio_network:
+    driver: bridge
