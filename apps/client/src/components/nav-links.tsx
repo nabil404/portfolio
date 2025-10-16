@@ -21,10 +21,8 @@ export const NavLinks = ({ isMobile = false }) => {
           href={link.href}
           onClick={handleClick}
           className={cn(
-            'text-gray-300 hover:bg-slate-600 hover:text-white',
-            isMobile
-              ? 'block px-3 py-2 rounded-md text-base font-medium'
-              : 'px-3 py-2 rounded-md text-sm font-medium',
+            'text-gray-300 hover:bg-secondary hover:text-white px-2 py-1 rounded-sm font-bold',
+            isMobile ? 'block text-base' : 'text-sm',
             'transition-colors duration-200',
           )}
         >

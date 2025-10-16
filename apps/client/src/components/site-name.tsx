@@ -3,7 +3,7 @@ export const SiteName = () => {
     <div className="flex-shrink-0">
       <a
         href="#"
-        className="text-white text-2xl font-bold hover:text-blue-400 transition-colors duration-200"
+        className="gradient-text text-2xl font-bold hover:text-blue-400 transition-colors duration-200"
       >
         nabil.com
       </a>
