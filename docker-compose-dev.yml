@@ -5,7 +5,7 @@ services:
     restart: unless-stopped
     env_file: apps/cms/.env.local
     ports:
-      - '5423:5432'
+      - '5432:5432'
     volumes:
       - postgres_data:/var/lib/postgresql/data
     networks:

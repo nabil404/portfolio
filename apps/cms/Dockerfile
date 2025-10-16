@@ -11,7 +11,7 @@ WORKDIR /app
 # Install turbo globally
 RUN yarn global add turbo@^2
 # Copy the entire monorepo
-COPY . .
+COPY cms .
 # Prune the monorepo to only include strapi and its dependencies
 RUN turbo prune cms --docker
 
