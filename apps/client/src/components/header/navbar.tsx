@@ -4,7 +4,7 @@ import { SiteName } from '@/components/header/site-name'
 
 export const Navbar = () => {
   return (
-    <nav className="fixed w-screen glass-effect z-50" aria-label="Main navigation">
+    <nav className="fixed w-screen glass-effect z-50 top-0" aria-label="Main navigation">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <SiteName />
