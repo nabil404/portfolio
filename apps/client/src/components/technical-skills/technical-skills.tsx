@@ -5,13 +5,13 @@ export const TechnicalSkills = () => {
   return (
     <section
       id="skills"
-      className="container mx-auto h-[950px] md:h-[900px] px-4 relative overflow-hidden"
+      className="container mx-auto h-[1500px] lg:h-[900px] px-4 relative overflow-hidden"
     >
       <Background />
       <div className="flex flex-col h-full items-center justify-center">
         <TitleWithSeparator title="Technical Skills" />
         <div className="mx-auto relative w-full">
-          <div className="grid grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div
               id="frontend-skills"
               className="glass-effect p-8 rounded-2xl border border-accent/20"

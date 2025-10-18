@@ -5,7 +5,7 @@ export const Experience = () => {
   return (
     <section
       id="experience"
-      className="container mx-auto h-[1600px] md:h-[1000px] px-4 relative overflow-hidden"
+      className="container mx-auto h-[2200px] xs:h-[2000px] sm:h-[1400px] md:h-[1200px] lg:h-[1000px] px-4 relative overflow-hidden"
     >
       <Background />
       <div className="flex flex-col h-full items-center justify-center">
@@ -13,7 +13,6 @@ export const Experience = () => {
         <div className="mx-auto">
           <div className="relative">
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full timeline-line"></div>
-
             <div id="experience-1" className="relative mb-16">
               <div className="flex items-center justify-between">
                 <div className="w-5/12 pr-8">

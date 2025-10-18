@@ -7,13 +7,13 @@ export const AboutMe = () => {
   return (
     <section
       id="about"
-      className="container mx-auto h-[1600px] md:h-[1000px] px-4 relative overflow-hidden"
+      className="container mx-auto h-[1750px] sm:h-[1280px] md:h-[1000px] px-4 relative overflow-hidden"
     >
       <Background />
       <div className="flex flex-col h-full items-center justify-center">
         <TitleWithSeparator title="About Me" />
         <div className="mx-auto relative">
-          <div className="grid grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div className="transition-all duration-400 ease-in-out hover:-translate-y-2 hover:scale-[1.02] glass-effect p-6 rounded-2xl border border-primary/20">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-primary to-red-400 rounded-lg flex items-center justify-center mr-4">
@@ -86,7 +86,7 @@ export const AboutMe = () => {
               robust, scalable applications. My passion lies in the intersection of innovative
               technology and practical problem-solving.
             </p>
-            <div className="grid grid-cols-4 gap-6 mt-8">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-8">
               <div className="text-center">
                 <div className="text-3xl font-black text-accent mb-2">50+</div>
                 <div className="text-gray-400 text-sm">Projects Delivered</div>

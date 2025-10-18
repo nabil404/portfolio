@@ -5,10 +5,9 @@ export const WorkWithMe = () => {
   return (
     <section
       id="contact"
-      className="container mx-auto h-[1000px] md:h-[800px] px-4 relative overflow-hidden"
+      className="container mx-auto h-[800px] sm:h-[600px] px-4 relative overflow-hidden"
     >
       <Background />
-
       <div className="flex flex-col h-full items-center justify-center">
         <TitleWithSeparator title="Want to Work With Me?" />
         <p className="text-2xl text-gray-300 mb-12 text-center leading-relaxed">

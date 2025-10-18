@@ -5,12 +5,12 @@ export const FeaturedProjects = () => {
   return (
     <section
       id="projects"
-      className="container mx-auto h-[1600px] md:h-[1000px] px-4 relative overflow-hidden"
+      className="container mx-auto h-[2400px] sm:h-[2100px] md:h-[2000px] lg:h-[1200px] px-4 relative overflow-hidden"
     >
       <Background />
       <div className="flex flex-col h-full items-center justify-center">
         <TitleWithSeparator title="Featured Projects" />
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div
             id="project-1"
             className="project-card glass-effect rounded-3xl overflow-hidden border border-accent/20"

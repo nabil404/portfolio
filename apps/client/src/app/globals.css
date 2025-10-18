@@ -2,6 +2,8 @@
 @import "tw-animate-css";
 
 @theme inline {
+  --breakpoint-xs: 30rem;
+
   /* Primary Colors - Cyan/Blue accent */
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
