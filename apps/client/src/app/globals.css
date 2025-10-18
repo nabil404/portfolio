@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@theme inline{
+@theme inline {
   /* Primary Colors - Cyan/Blue accent */
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
@@ -125,6 +125,9 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     @apply bg-background text-foreground;
   }
@@ -143,6 +146,9 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+  .gradient-background {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+  }
   .floating {
     animation: floating 3s ease-in-out infinite;
   }
@@ -159,5 +165,11 @@
   @keyframes pulse-glow {
     from { box-shadow: 0 0 20px rgba(255, 107, 53, 0.4); }
     to { box-shadow: 0 0 40px rgba(255, 107, 53, 0.8); }
+  }
+  .hover-card {
+    transition: all 0.4s ease;
+  }
+  .hover-card:hover {
+    transform: translateY(-8px) scale(1.02);
   }
 }

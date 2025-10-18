@@ -6,11 +6,11 @@ export const Home = () => {
   return (
     <section
       id="home"
-      className="container mx-auto h-[950px] md:h-[800px] relative overflow-x-hidden md:overflow-x-visible"
+      className="container mx-auto h-[950px] md:h-[900px] px-4 relative overflow-x-hidden md:overflow-x-visible"
     >
       <Background />
-      <div className="mx-auto px-8 h-full flex items-center relative z-10">
-        <div className="flex flex-col md:flex-row-reverse gap-16 items-center w-full">
+      <div className="mx-auto h-full flex items-center relative z-10">
+        <div className="flex flex-col md:flex-row-reverse gap-5 md:gap-10 items-center w-full">
           <ProfileImage />
           <Intro />
         </div>
