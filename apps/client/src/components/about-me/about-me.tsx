@@ -7,12 +7,12 @@ export const AboutMe = () => {
   return (
     <section
       id="about"
-      className="container mx-auto h-[950px] md:h-[900px] px-4 relative overflow-hidden"
+      className="container mx-auto h-[1600px] md:h-[1000px] px-4 relative overflow-hidden"
     >
-      <TitleWithSeparator title="About Me" />
-      <div className="mx-auto relative">
-        <Background />
-        <div className="mx-auto">
+      <Background />
+      <div className="flex flex-col h-full items-center justify-center">
+        <TitleWithSeparator title="About Me" />
+        <div className="mx-auto relative">
           <div className="grid grid-cols-2 gap-8 mb-12">
             <div className="transition-all duration-400 ease-in-out hover:-translate-y-2 hover:scale-[1.02] glass-effect p-6 rounded-2xl border border-primary/20">
               <div className="flex items-center mb-4">
