@@ -172,4 +172,7 @@
   .hover-card:hover {
     transform: translateY(-8px) scale(1.02);
   }
+  .timeline-line {
+    background: linear-gradient(to bottom, #00d4ff, #ff6b35);
+  }
 }

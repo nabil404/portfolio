@@ -10,7 +10,7 @@ export const TechnicalSkills = () => {
       <Background />
       <div className="flex flex-col h-full items-center justify-center">
         <TitleWithSeparator title="Technical Skills" />
-        <div className="mx-auto relative ">
+        <div className="mx-auto relative w-full">
           <div className="grid grid-cols-3 gap-12">
             <div
               id="frontend-skills"
