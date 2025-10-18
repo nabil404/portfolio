@@ -3,6 +3,7 @@ import { AboutMe } from '@/components/about-me/about-me'
 import { TechnicalSkills } from '@/components/technical-skills/technical-skills'
 import { Experience } from '@/components/experience/experience'
 import { FeaturedProjects } from '@/components/featured-projects/featured-projects'
+import { WorkWithMe } from '@/components/work-with-me/work-with-me'
 
 export default function LandingPage() {
   return (
@@ -12,6 +13,7 @@ export default function LandingPage() {
       <TechnicalSkills />
       <Experience />
       <FeaturedProjects />
+      <WorkWithMe />
     </>
   )
 }
