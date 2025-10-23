@@ -9,6 +9,11 @@ const nextConfig: NextConfig = {
         hostname: 'storage.googleapis.com',
         pathname: '**', // allow all paths
       },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        pathname: '**', // allow all paths
+      },
     ],
   },
 }

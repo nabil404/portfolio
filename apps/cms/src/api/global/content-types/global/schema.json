@@ -25,6 +25,24 @@
       "maxLength": 50,
       "required": true
     },
+    "designation1": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "required": true
+    },
+    "designation2": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "required": true
+    },
     "tagline": {
       "type": "string",
       "pluginOptions": {
@@ -35,14 +53,20 @@
       "maxLength": 200,
       "required": true
     },
-    "resumeUrl": {
-      "type": "string",
+    "resume": {
+      "type": "media",
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       },
-      "required": true
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     },
     "heroImage": {
       "type": "media",
