@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_skills_items",
+  "info": {
+    "displayName": "Item"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "proficiency": {
+      "type": "integer",
+      "required": true,
+      "min": 1,
+      "max": 100
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_skills_categories",
+  "info": {
+    "displayName": "Category"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "maxLength": 50,
+      "required": true,
+      "unique": true
+    },
+    "skills": {
+      "type": "component",
+      "component": "skills.item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

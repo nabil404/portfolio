@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_about_me_traits",
+  "info": {
+    "displayName": "Trait"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "maxLength": 50,
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "text",
+      "maxLength": 200,
+      "required": true
+    }
+  },
+  "config": {}
+}
